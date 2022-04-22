@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "prettier"],
+  "extends": ["prettier/react"],
+  "globals": {
+    "React": true,
+    "document": true,
+    "window": true,
+    "jQuery": true,
+    "$": true,
+    "localStorage": true,
+    "fetch": true
+  },
+  "root": true,
+  "rules": {
+    "default-case": 0,
+    "no-case-declarations": 0,
+    "new-cap": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
+    "no-console": 0
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}
