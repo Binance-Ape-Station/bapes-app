@@ -126,12 +126,14 @@ const Home = (props) => {
 
   /************* timer **************/
 
+  const [remainingDays, setRemainingDays] = useState('00');
   const [remainingHours, setRemainingHours] = useState('00');
   const [remainingMinutes, setRemainingMinutes] = useState('00');
   const [remainingSeconds, setRemainingSeconds] = useState('00');
   const [remainingMillis, setRemainingMillis] = useState('0');
 
-  const isReady = useMemo(() => remainingHours == '00' && remainingMinutes == '00' && remainingSeconds == '00' && remainingMillis == '00', [
+  const isReady = useMemo(() => remainingHours == '00' && remainingHours == '00' && remainingMinutes == '00' && remainingSeconds == '00' && remainingMillis == '00', [
+    remainingDays,
     remainingHours,
     remainingMinutes,
     remainingSeconds,
@@ -150,17 +152,21 @@ const Home = (props) => {
       const now = new Date().getTime();
       const remainingMs = nextPropulsion - now;
 
-      let hours = 0,
+      let 
+        days = 0,
+        hours = 0,
         minutes = 0,
         seconds = 0,
         millis = 0;
       if (remainingMs >= 0) {
+        days = Math.floor(remainingMs / d);
         hours = Math.floor((remainingMs % d) / h);
         minutes = Math.floor((remainingMs % h) / m);
         seconds = Math.floor((remainingMs % m) / s);
         millis = Math.floor((remainingMs % s) / ms);
       }
 
+      setRemainingDays(days.toString().padStart(2, '0'));
       setRemainingHours(hours.toString().padStart(2, '0'));
       setRemainingMinutes(minutes.toString().padStart(2, '0'));
       setRemainingSeconds(seconds.toString().padStart(2, '0'));
@@ -377,7 +383,7 @@ const Home = (props) => {
             {remainingSecondsForPropulsion >= 0 && isReady && <span>READY 🚀</span>}
             {remainingSecondsForPropulsion >= 0 && !isReady && (
               <>
-                <span id="hours">{remainingHours}</span>:<span id="minutes">{remainingMinutes}</span>:<span id="seconds">{remainingSeconds}</span>:
+                <span id="hours">{remainingDays}</span>:<span id="hours">{remainingHours}</span>:<span id="minutes">{remainingMinutes}</span>:<span id="seconds">{remainingSeconds}</span>:
                 <span id="milli">{remainingMillis}</span>
               </>
             )}
