@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { utils, BigNumber } from 'ethers';
+import { BigNumber, utils } from 'ethers';
 import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -10,20 +10,7 @@ import PlanetBg from 'src/assets/images/planet.png';
 import StarGif from 'src/assets/images/star.gif';
 import WinnerSvg from 'src/assets/images/winner.svg';
 import MoonSound from 'src/assets/sounds/moon.mp3';
-import {
-  AVERAGE_BLOCK_TIME_IN_SECS,
-  DEXT_LINK,
-  BAPES_API_SUMMARY_ENDPOINT,
-  BAPES_PROPULSOR,
-  BAPES_TOKEN,
-  BAPES_TOKEN_DECIMALS,
-  BAPES_TOKEN_TOTAL_SUPPLY,
-  PCS_BUY_LINK,
-  PROPULSION_DEMO_LINK,
-  TELEGRAM_LINK,
-  PKP_BUY_LINK,
-  BAPES_API_LOGS_ENDPOINT,
-} from 'src/constants';
+import { AVERAGE_BLOCK_TIME_IN_SECS, BAPES_API_LOGS_ENDPOINT, BAPES_API_SUMMARY_ENDPOINT, BAPES_PROPULSOR, BAPES_TOKEN, BAPES_TOKEN_DECIMALS, BAPES_TOKEN_TOTAL_SUPPLY, DEXT_LINK, PCS_BUY_LINK, PKP_BUY_LINK, PROPULSION_DEMO_LINK, TELEGRAM_LINK } from 'src/constants';
 import { useActiveWeb3React } from 'src/hooks';
 import { usePropulsorContract, useTokenContract } from 'src/hooks/useContract';
 import { getEtherscanLink, shortenAddress } from 'src/utils';
@@ -195,10 +182,10 @@ const Home = (props) => {
 
   useEffect(() => {
     if (lastPropulsionBlock == 0 || blocksBetweenPropulsion == 0) return;
-    refreshTimer();
+    // refreshTimer();
 
     const refreshInterval = setInterval(() => {
-      refreshTimer();
+      // refreshTimer();
     }, 9500);
 
     return () => clearInterval(refreshInterval);
@@ -298,6 +285,14 @@ const Home = (props) => {
 
     return () => clearInterval(refreshInterval);
   }, [account, chainId]);
+
+  useEffect(() => {
+    const now = new Date();
+    const launch = new Date(1651345200000);
+    const secondsUntilLaunchDate = (launch.getTime() - now.getTime()) / 1000;
+
+    setRemainingSecondsForPropulsion(secondsUntilLaunchDate);
+  }, []);
 
   return (
     <main>
