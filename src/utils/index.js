@@ -20,7 +20,7 @@ const ETHERSCAN_PREFIXES = {
 };
 
 export function getEtherscanLink(chainId, data, type) {
-  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}bscscan.com`;
+  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[56]}bscscan.com`;
 
   switch (type) {
     case 'transaction': {
