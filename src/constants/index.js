@@ -13,13 +13,13 @@ export const BAPES_TOKEN_TOTAL_SUPPLY = 200000000;
 export const BAPES_TOKEN_DECIMALS = 8;
 
 export const BAPES_TOKEN = {
-  [56]: '0x5dD7FD4f43e0d9242D79A111AaE82EFF969f411e',
   [97]: '0x0c8a0323B4BA4F5A13Bce7cdb3C01fF01Cc468a0',
+  [56]: '0x5dD7FD4f43e0d9242D79A111AaE82EFF969f411e',
 };
 
 export const BAPES_PROPULSOR = {
-  [56]: '0x9837182021663278691d5AFD69d2A3fE84131A9B',
   [97]: '0x5C0FB91db2d72B61e12cD83645b44EFFb1dB1D5b',
+  [56]: '0x9837182021663278691d5AFD69d2A3fE84131A9B',
 };
 
 export const getBapesToken = chainId => {
@@ -62,7 +62,7 @@ export const TWITTER_LINK = 'https://twitter.com/bapes_crypto';
 export const GITHUB_LINK = 'https://github.com/Binance-Ape-Station';
 export const MEDIUM_LINK = '#';
 
-export const PKP_BUY_LINK = 'https://www.pinksale.finance/#/launchpads/all?chain=BSC';
+export const PKP_BUY_LINK = 'https://www.pinksale.finance/#/launchpad/0x3b563e81F1F6AcEAd077D1F5A142aBc2a1e9639E?chain=BSC';
 export const PCS_BUY_LINK = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x';
 
 export const DEXT_LINK = '#';

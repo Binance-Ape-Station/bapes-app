@@ -551,10 +551,13 @@ const Home = (props) => {
               <div className="p" style={{ marginBottom: '5px' }}>
                 <dl>
                   <dd-road>
-                    Liquidity: ➜ <span style={{ fontWeight: 'bold' }}>170 000 000</span> (85%)
+                    Presale: ➜ <span style={{ fontWeight: 'bold' }}>110 000 000</span> (55%)
                   </dd-road>
                   <dd-road>
-                    Marketing ➜ <span style={{ fontWeight: 'bold' }}>20 000 000</span> (10%)
+                    Liquidity: ➜ <span style={{ fontWeight: 'bold' }}>56 000 000</span> (28%)
+                  </dd-road>
+                  <dd-road>
+                    Marketing ➜ <span style={{ fontWeight: 'bold' }}>24 000 000</span> (12%)
                   </dd-road>
                   <dd-road>
                     Team ➜ <span style={{ fontWeight: 'bold' }}>10 000 000</span> (5%)

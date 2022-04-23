@@ -1,9 +1,9 @@
-import React from 'react';
-import { Contract } from '@ethersproject/contracts';
 import { getAddress } from '@ethersproject/address';
-import { AddressZero } from '@ethersproject/constants';
 import { BigNumber } from '@ethersproject/bignumber';
+import { AddressZero } from '@ethersproject/constants';
+import { Contract } from '@ethersproject/contracts';
 import { JSBI, Percent } from '@uniswap/sdk';
+import React from 'react';
 
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value) {
