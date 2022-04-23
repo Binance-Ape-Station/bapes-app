@@ -319,7 +319,7 @@ const Home = (props) => {
             </p>
           </div>
 
-          <a href={PCS_BUY_LINK} target="_blank" className="btn">
+          <a href={PKP_BUY_LINK} target="_blank" className="btn">
             Buy BAPES 🍌
           </a>
 
@@ -566,7 +566,7 @@ const Home = (props) => {
               </div>
               <p>A limit of 100 million BAPES burned has been implemented in the token contract to prevent the supply from going to zero.</p>
             </div>
-            <a href={PCS_BUY_LINK} target="_blank" className="btn">
+            <a href={PKP_BUY_LINK} target="_blank" className="btn">
               Buy BAPES 🍌
             </a>
           </div>

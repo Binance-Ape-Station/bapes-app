@@ -68,7 +68,7 @@ const Header = () => {
                 <li><HashLink smooth to="/#faq" onClick={closeNav}>FAQ</HashLink></li>
                 <li><a href={TELEGRAM_LINK} target="_blank" onClick={closeNav}>Telegram</a></li>
                 <li>
-                  <a href={PCS_BUY_LINK} target="_blank">
+                  <a href={PKP_BUY_LINK} target="_blank">
                     <span>
                       Buy BAPES 🍌
                     </span>
