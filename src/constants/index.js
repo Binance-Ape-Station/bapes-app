@@ -63,7 +63,7 @@ export const GITHUB_LINK = 'https://github.com/Binance-Ape-Station';
 export const MEDIUM_LINK = '#';
 
 export const PKP_BUY_LINK = 'https://www.pinksale.finance/#/launchpad/0x3b563e81F1F6AcEAd077D1F5A142aBc2a1e9639E?chain=BSC';
-export const PCS_BUY_LINK = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x';
+export const PCS_BUY_LINK = 'https://exchange.pancakeswap.finance/#/swap?inputCurrency=0x5dD7FD4f43e0d9242D79A111AaE82EFF969f411e';
 
 export const DEXT_LINK = '#';
 export const PROPULSION_DEMO_LINK = '#';
