@@ -317,7 +317,12 @@ const Home = (props) => {
               Every 12 hours, the Propulsor starts up then propels randomly a BAPES holder into space.{' '}
               <span style={{ color: '#f4cf63' }}>This lucky apestronaut receives all of the fees that was pooled during the previous period!</span>
             </p>
+
+            <div className="pinksale">
+              😍 Join the pool on PinkSale <strong>📅 April 30th, 7pm UTC</strong> <a href="https://www.pinksale.finance/#/launchpad/0x3b563e81F1F6AcEAd077D1F5A142aBc2a1e9639E?chain=BSC" target="_blank" rel="noopener noreferrer" title="Go PinkSale">View on PinkSale</a>
+            </div>
           </div>
+
 
           <a href={PKP_BUY_LINK} target="_blank" className="btn">
             Buy BAPES 🍌
